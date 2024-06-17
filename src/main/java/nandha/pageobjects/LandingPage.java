@@ -24,7 +24,7 @@ public class LandingPage extends AbstractComponents {
 	// Page Factory
 	
 	@FindBy(id="userEmail")
-	WebElement userEmail; 
+	WebElement userEmail;
 	
 	@FindBy(id="userPassword")
 	WebElement userPassword; 
