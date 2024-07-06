@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="nandha.tests.ErrorValidations">
+      <class name="nandha.tests.flipkartBaseTest">
         <methods>
           <include name="tearDown"/>
-          <include name="launchApplication"/>
           <include name="submitOrder"/>
+          <include name="launchApplication"/>
         </methods>
-      </class> <!-- nandha.tests.ErrorValidations -->
+      </class> <!-- nandha.tests.flipkartBaseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

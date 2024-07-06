@@ -1,5 +1,6 @@
 package nandha.tests;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -22,7 +23,7 @@ import nandha.pageobjects.ProductCatalogue;
 
 public class SubmitOrderTestCopy {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		
 		String productName = "ZARA COAT 3";

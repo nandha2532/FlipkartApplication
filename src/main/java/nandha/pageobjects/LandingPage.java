@@ -1,5 +1,9 @@
 package nandha.pageobjects;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,33 +27,7 @@ public class LandingPage extends AbstractComponents {
 	
 	// Page Factory
 	
-	@FindBy(id="userEmail")
-	WebElement userEmail;
-	
-	@FindBy(id="userPassword")
-	WebElement userPassword; 
-	
-	@FindBy(id="login")
-	WebElement submit;
-	
-	@FindBy(css="flyInOut")
-	WebElement errorMessage; 
-	
-	public ProductCatalogue loginApplication(String email,String password) 
-	{
-		userEmail.sendKeys(email);
-		userPassword.sendKeys(password);
-		submit.click();
-		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
-		return productCatalogue;
-	}
-	
-	public String getErrorMessaage() {
-		waitForWebElementToAppear(errorMessage);
-		return errorMessage.getText();
-	}
-	
-	public void goTo() {
-		driver.get("https://rahulshettyacademy.com/client");
+	public void goTo() throws IOException {
+		driver.get(getProp("url"));
 	}
 }

@@ -21,24 +21,30 @@ import org.testng.annotations.BeforeMethod;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import nandha.AbstractComponents.AbstractComponents;
 import nandha.pageobjects.LandingPage;
+import nandha.pages.HomePage;
 
 public class BaseTest {
+
 
 	public WebDriver driver; // if driver is initialised in the if condition it's scope is limited "WebDriver driver = new ChromeDriver();"
 	// so to make scope  driver is initialised here and --> WebDriver removed in declaration "driver = new ChromeDriver();"
 	
-	public LandingPage landingPage;//Public -->so otehr classes can access
+	public AbstractComponents abs;//Public -->so otehr classes can access
+	public HomePage homePage;
 	
 	public WebDriver initializeDriver() throws IOException {
+		
 		
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\nandha\\resources\\GlobalData.properties");
 		prop.load(fis);
+		String browserName = prop.getProperty("browser");
 		
-		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
-//		String browserName = prop.getProperty("browser");
-		
+//		String browserName = AbstractComponents.getProp("browser");
+
+		System.out.println(browserName);
 		if(browserName.equalsIgnoreCase("Chrome")) {
 		driver = new ChromeDriver();
 
@@ -81,16 +87,17 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod(alwaysRun=true)
-	public LandingPage launchApplication() throws IOException {
-		
+	public HomePage launchApplication() throws IOException {
+
 		driver = initializeDriver();
-		landingPage = new LandingPage(driver); // send driver as argument to the LandingPage()
-		landingPage.goTo();
-		return landingPage;
+		driver.get(AbstractComponents.getProp("url"));
+		abs = new AbstractComponents(driver);
+		homePage = new HomePage(driver); // send driver as argument to the LandingPage()
+		return homePage;
 	}
 	
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		driver.close();	
+//		driver.close();	
 	}
 }
