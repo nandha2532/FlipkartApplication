@@ -4,10 +4,10 @@
 <suite name="Suite">
 
 <listeners>
-	<listener class-name= "nandha.TestComponents.Listeners"/>
+	<listener class-name= "nandha.TestComponents.Listeners"/>	
 
 </listeners>
-  <test thread-count="5" name="submit Order">
+  <test thread-count="5" name="Place Order in Flipkart">
     <classes>
       <class name="nandha.tests.flipkartBaseTest"/> 
     </classes>

@@ -11,11 +11,14 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -35,20 +38,38 @@ public class BaseTest {
 	public AbstractComponents abs;// Public -->so otehr classes can access
 	public HomePage homePage;
 
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	public WebDriver initializeDriver() throws IOException {
 
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\nandha\\resources\\GlobalData.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+//		String browserName = prop.getProperty("browser");
+//		System.getProperty(browser)!= null;
+		String browserName = System.getProperty("browser")!= null ? System.getProperty("browser"):prop.getProperty("browser");
+		
+//		condition != null ? "Condition - true: this will execute" :  "Condition - false: this will execute"
+		
 
 //		String browserName = AbstractComponents.getProp("browser");
 
 		System.out.println(browserName);
-		if (browserName.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
+//		if (browserName.equalsIgnoreCase("Chrome")) {
+//			driver = new ChromeDriver();
+//
+//		}
+		if (browserName.contains("chrome")) {
+			
+			ChromeOptions options = new ChromeOptions();
+			if(browserName.contains("headless")) {
+				options.addArguments("headless");
+			}
+
+			driver = new ChromeDriver(options);
+			
+//			in headless mode to open browser in full screen mode use the set size
+			driver.manage().window().setSize(new Dimension(1400,900));
 
 		}
 
@@ -57,7 +78,7 @@ public class BaseTest {
 		}
 
 		if (browserName.equalsIgnoreCase("Firefox")) {
-			driver = new EdgeDriver();
+			driver = new FirefoxDriver();
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

@@ -1,8 +1,7 @@
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\pageobjects\ProductCatalogue.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\resources\ExtentReporterNG.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\pageobjects\CartPage.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\AbstractComponents\AbstractComponents.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\pageobjects\LandingPage.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\pageobjects\ConfirmationPage.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\pageobjects\OrderPage.java
-C:\Users\2055757\Selenium_Training\NewFramework\SeleniumFramework\src\main\java\nandha\pageobjects\CheckOutPage.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\Utils\XL.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\nandha\resources\ExtentReporterNG.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\nandha\AbstractComponents\AbstractComponents.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\nandha\pages\cartPage.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\nandha\pages\LoginPage.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\nandha\pages\ProductPage.java
+C:\Users\vnand\NK\Flipkart\SeleniumFramework\src\main\java\nandha\pages\HomePage.java

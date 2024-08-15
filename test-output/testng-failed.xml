@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="nandha.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="submit Order(failed)">
+  <test thread-count="5" name="Place Order in Flipkart(failed)">
     <classes>
       <class name="nandha.tests.flipkartBaseTest">
         <methods>
@@ -14,5 +14,5 @@
         </methods>
       </class> <!-- nandha.tests.flipkartBaseTest -->
     </classes>
-  </test> <!-- submit Order(failed) -->
+  </test> <!-- Place Order in Flipkart(failed) -->
 </suite> <!-- Failed suite [Suite] -->

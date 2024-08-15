@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-22T07:50:24 IST" name="Suite" finished-at="2024-07-22T07:51:04 IST" duration-ms="40005">
+  <suite started-at="2024-08-15T18:34:26 IST" name="Suite" finished-at="2024-08-15T18:35:20 IST" duration-ms="54331">
     <groups>
     </groups>
-    <test started-at="2024-07-22T07:50:24 IST" name="submit Order" finished-at="2024-07-22T07:51:04 IST" duration-ms="40005">
+    <test started-at="2024-08-15T18:34:26 IST" name="Place Order in Flipkart" finished-at="2024-08-15T18:35:20 IST" duration-ms="54331">
       <class name="nandha.tests.flipkartBaseTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nandha.tests.flipkartBaseTest@1603cd68]" started-at="2024-07-22T07:50:25 IST" name="launchApplication" finished-at="2024-07-22T07:50:31 IST" duration-ms="6556" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nandha.tests.flipkartBaseTest@22f31dec]" started-at="2024-08-15T18:34:26 IST" name="launchApplication" finished-at="2024-08-15T18:34:46 IST" duration-ms="20463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder()[pri:0, instance:nandha.tests.flipkartBaseTest@1603cd68]" started-at="2024-07-22T07:50:31 IST" name="submitOrder" finished-at="2024-07-22T07:51:04 IST" duration-ms="33404" status="PASS">
+        <test-method signature="submitOrder()[pri:0, instance:nandha.tests.flipkartBaseTest@22f31dec]" started-at="2024-08-15T18:34:46 IST" name="submitOrder" finished-at="2024-08-15T18:35:20 IST" duration-ms="33809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:nandha.tests.flipkartBaseTest@1603cd68]" started-at="2024-07-22T07:51:04 IST" name="tearDown" finished-at="2024-07-22T07:51:04 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nandha.tests.flipkartBaseTest@22f31dec]" started-at="2024-08-15T18:35:20 IST" name="tearDown" finished-at="2024-08-15T18:35:20 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- nandha.tests.flipkartBaseTest -->
-    </test> <!-- submit Order -->
+    </test> <!-- Place Order in Flipkart -->
   </suite> <!-- Suite -->
 </testng-results>

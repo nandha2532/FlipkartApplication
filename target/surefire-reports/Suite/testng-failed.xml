@@ -4,16 +4,15 @@
   <listeners>
     <listener class-name="nandha.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Error Validations Test(failed)" verbose="0">
+  <test thread-count="5" name="Place Order in Flipkart(failed)" verbose="0">
     <classes>
-      <class name="nandha.tests.ErrorValidationsTest">
+      <class name="nandha.tests.flipkartBaseTest">
         <methods>
           <include name="tearDown"/>
           <include name="submitOrder"/>
-          <include name="productErrorValidation"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- nandha.tests.ErrorValidationsTest -->
+      </class> <!-- nandha.tests.flipkartBaseTest -->
     </classes>
-  </test> <!-- Error Validations Test(failed) -->
+  </test> <!-- Place Order in Flipkart(failed) -->
 </suite> <!-- Failed suite [Suite] -->
